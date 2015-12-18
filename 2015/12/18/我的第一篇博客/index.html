@@ -1,0 +1,700 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="Android最佳实践  2015年12月5日20:56:38PHPHub for Android该项目是PHPHub网站的安卓客户端，最近全面开源了（包括服务器端和ios、android端）项目架构采用 MVP 模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的第一篇博客">
+<meta property="og:url" content="http://yoursite.com/2015/12/18/我的第一篇博客/index.html">
+<meta property="og:site_name" content="liuzhe的博客">
+<meta property="og:description" content="Android最佳实践  2015年12月5日20:56:38PHPHub for Android该项目是PHPHub网站的安卓客户端，最近全面开源了（包括服务器端和ios、android端）项目架构采用 MVP 模式">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/324764/10683969/448b0cda-797a-11e5-8f93-3e51ad7144df.png">
+<meta property="og:image" content="http://img.blog.csdn.net/20150819170604470">
+<meta property="og:updated_time" content="2015-12-18T09:32:55.586Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的第一篇博客">
+<meta name="twitter:description" content="Android最佳实践  2015年12月5日20:56:38PHPHub for Android该项目是PHPHub网站的安卓客户端，最近全面开源了（包括服务器端和ios、android端）项目架构采用 MVP 模式">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'always',
+    motion: true
+  };
+</script>
+
+  <title> 我的第一篇博客 | liuzhe的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">liuzhe的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">刘哲</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                我的第一篇博客
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-18T17:17:57+08:00" content="2015-12-18">
+              2015-12-18
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="Android_u6700_u4F73_u5B9E_u8DF5_2015_u5E7412_u67085_u65E520_3A56_3A38"><a href="#Android_u6700_u4F73_u5B9E_u8DF5_2015_u5E7412_u67085_u65E520_3A56_3A38" class="headerlink" title="Android最佳实践  2015年12月5日20:56:38"></a>Android最佳实践  2015年12月5日20:56:38</h1><h2 id="PHPHub_for_Android"><a href="#PHPHub_for_Android" class="headerlink" title="PHPHub for Android"></a><a href="https://github.com/CycloneAxe/phphub-android" target="_blank" rel="external">PHPHub for Android</a></h2><p>该项目是PHPHub网站的安卓客户端，最近全面开源了（包括服务器端和ios、android端）<br>项目架构采用 MVP 模式<br><img src="https://cloud.githubusercontent.com/assets/324764/10683969/448b0cda-797a-11e5-8f93-3e51ad7144df.png" alt="图片展示"><br><a id="more"></a></p>
+<h3 id="u529F_u80FD_u7B80_u8FF0"><a href="#u529F_u80FD_u7B80_u8FF0" class="headerlink" title="功能简述"></a>功能简述</h3><ul>
+<li>渠道包构建</li>
+<li>使用 nucleus 简化 MVP 架构</li>
+<li>使用 RxJava 处理 API 请求返回数据</li>
+<li>使用 SmartTabLayout 实现带 Icon 的选项卡切换</li>
+<li>消息提醒</li>
+<li>使用 Account Manager 存储登陆用户信息</li>
+<li>WebView 图片点击事件注入</li>
+<li>二维码扫描登陆</li>
+<li>Deep Link 实现</li>
+</ul>
+<h3 id="u5907_u6CE8"><a href="#u5907_u6CE8" class="headerlink" title="备注"></a>备注</h3><p>准备着手研究该项目的部分功能，它怎么配合nucleus、RxJava等第三方库进行开发的</p>
+<h2 id="Nucleus"><a href="#Nucleus" class="headerlink" title="Nucleus"></a><a href="https://github.com/konmik/nucleus" target="_blank" rel="external">Nucleus</a></h2><p>Nucleus is a simple Android library, which utilizes the Model-View-Presenter pattern to properly connect background tasks with visual parts of an application.<br>翻译（Nucleus是一个简单的安卓第三方库，可以通过MVP模式正确的把后台任务连接到应用程序的视图部分）</p>
+<h4 id="u4ECB_u7ECD_uFF08_u7FFB_u8BD1_u81EA_u8BE5_u9879_u76EE_u7684README_uFF09"><a href="#u4ECB_u7ECD_uFF08_u7FFB_u8BD1_u81EA_u8BE5_u9879_u76EE_u7684README_uFF09" class="headerlink" title="介绍（翻译自该项目的README）"></a>介绍（翻译自该项目的README）</h4><p>自从MVP模式和Rxjava在程序中已经完全取代了Loader和AsyncTask有一段时间了。</p>
+<p>但是在程序中仍然有一些瑕疵，即使我们使用这些先进的技术。<br>比如：在配置改变使后台任务不能继续进行、在进程重启后不能自动的重启后台任务。</p>
+<p>虽然大多软件没有这样的功能，但是它们忽视这个就是一个明显的错误，就像是一个坐着等待点击登录按钮的用户，当他进入地铁会因为网络太慢而切换到另一个应用。就这样应用总会产生大量BUG。</p>
+<p>Android文档简单的描述了这种问题<a href="http://developer.android.com/guide/components/processes-and-threads.html#Lifecycle" target="_blank" rel="external">Processes and Threads - 4. Background process </a>，”如果一个Activity正确的实现了它的生命周期方法，并且保存的它当前的状态，那么终止它的进程不会对用户造成明显影响，因为当用户又返回到这个Activity时，会回复所有可见状态”。</p>
+<p>然而这是不对的–会有明显的影响因为我们不能回复后台任务。程序会恢复它的可见状态，但是会忘记正在做的事情是什么。所以，如果应用要恢复一个progress bar,但不能恢复自身的后台任务，这样用户通常会看到progress bar一直显示的bug。</p>
+<h4 id="Nucleus_u7684_u4E3B_u8981_u7279_u6027_uFF08_u7FFB_u8BD1_u81EA_u8BE5_u9879_u76EE_u7684README_uFF09"><a href="#Nucleus_u7684_u4E3B_u8981_u7279_u6027_uFF08_u7FFB_u8BD1_u81EA_u8BE5_u9879_u76EE_u7684README_uFF09" class="headerlink" title="Nucleus的主要特性（翻译自该项目的README）"></a>Nucleus的主要特性（翻译自该项目的README）</h4><ul>
+<li><p>为了以防配置改变的影响，Nucleus会自动重连接所有在后台运行的任务到新的View上。这样程序不会忘记它正在做的事情了。</p>
+</li>
+<li><p>为了以防进程重启，Nucleus会自动重启后台任务。即使是运行在低内存的设备上或者是长时等待后台任务完成，程序仍然是可靠的。</p>
+</li>
+<li><p>整个库项目已经构建好了，保持着”<a href="https://people.apache.org/~fhanik/kiss.html" target="_blank" rel="external">The Kiss Principle</a>“的思想。任何人都能容易的读懂理解。</p>
+</li>
+<li><p>想不不依赖与Dagger，你不需要写一个类注入到presenter中。你只需要一个注解就够了。尽管presenter实例化不需要Dagger,但是它们的依赖仍可以被注入。</p>
+</li>
+<li><p>在Nucleus中，presenter是个额外的类，不依赖View，这样自然就防止了很多由activity context引起的泄露问题。</p>
+</li>
+</ul>
+<h2 id="Scoop"><a href="#Scoop" class="headerlink" title="Scoop"></a><a href="https://github.com/lyft/scoop" target="_blank" rel="external">Scoop</a></h2><p>micro framework for building view based modular Android applications.<br>用于构建基于模块化的视图应用程序的小框架。</p>
+<p>###　What do I get?（scoop包含什么？）</p>
+<ul>
+<li>1.Router(路由)：允许你控制Screen和backstack之间的跳转。</li>
+<li>2.View Controller(视图控制器)：一个新的构建区，用于替换Activity和Fragment</li>
+<li>3.Scoops(分层控制)：通过分层管理应用的依赖和生命周期</li>
+<li>4.Transitions（动画过渡）：我们提供一组基本的过渡动画，如左滑右滑。此外，你还可以创建自定义动画过渡。</li>
+</ul>
+<h3 id="Navigation__uFF08_u5BFC_u822A_uFF09"><a href="#Navigation__uFF08_u5BFC_u822A_uFF09" class="headerlink" title="Navigation （导航）"></a>Navigation （导航）</h3><p>TODO 有待完善</p>
+<h2 id="Android_u5F00_u53D1_u67B6_u6784_u6A21_u5F0F_u63A2_u7D22"><a href="#Android_u5F00_u53D1_u67B6_u6784_u6A21_u5F0F_u63A2_u7D22" class="headerlink" title="Android开发架构模式探索"></a>Android开发架构模式探索</h2><h3 id="RxFlux"><a href="#RxFlux" class="headerlink" title="RxFlux"></a><a href="https://github.com/skimarxall/RxFlux" target="_blank" rel="external">RxFlux</a></h3><p>一个把 Flux 架构跟 RxJava 结合起来的框架</p>
+<h3 id="Android-CleanArchitecture"><a href="#Android-CleanArchitecture" class="headerlink" title="Android-CleanArchitecture"></a><a href="https://github.com/android10/Android-CleanArchitecture" target="_blank" rel="external">Android-CleanArchitecture</a></h3><p>无论从架构还是代码上看，分层都是三层：视图层(Presentation Layer)、控制层(Domain Layer)、数据流层(Data Layer)。<br>层级之间通过添加接口层作为分隔实现解耦。<br>简单来说，优点有以下        </p>
+<ul>
+<li><p>层次分明，各层级之间都不管对方如何实现，只关注结果；</p>
+</li>
+<li><p>在视图层(Presentation Layer)使用MVP架构，使原本臃肿的Activity(或Fragment)变得简单，其处理方法都交给了Presenter。</p>
+</li>
+<li><p>易于做测试，只要基于每个模块单独做好单元测试就能确保整体的稳定性。</p>
+</li>
+<li><p>易于快速迭代，基于代码的低耦合，只需在业务逻辑上增加接口，然后在相应的层级分别实现即可，丝毫不影响其他功能。</p>
+</li>
+</ul>
+<p>….等等</p>
+<p>目前发现的缺点：</p>
+<ul>
+<li><p>由于视图层(Presentation Layer)使用MVP模式，每个有独立逻辑的Activity(Fragment)都拥有独立的Presenter，当View多起来时候Presenter维护起来就显得略麻烦</p>
+</li>
+<li><p>上手难度比较大，学习曲线比较陡峭</p>
+</li>
+</ul>
+<h2 id="Android__u4E2D_u7684_Flux__u67B6_u6784"><a href="#Android__u4E2D_u7684_Flux__u67B6_u6784" class="headerlink" title="Android 中的 Flux 架构"></a><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0816/3311.html" target="_blank" rel="external">Android 中的 Flux 架构</a></h2><p>Flux架构, 顾名思义表示流, 是以数据流为基础，且是单向的数据流。<br>Facebook使用Flux架构来构建客户端Web应用. Flux架构并不是为移动端设计的, 但是我们仍然可以在Android开发时采用这个思想.</p>
+<p><img src="http://img.blog.csdn.net/20150819170604470" alt="图片展示"></p>
+<ul>
+<li><p>使用flux架构的一个<a href="https://github.com/lgvalle/android-flux-todo-app" target="_blank" rel="external">TODO应用</a></p>
+</li>
+<li><p>相关链接 <a href="http://blog.csdn.net/morndragon/article/details/47860659" target="_blank" rel="external">http://blog.csdn.net/morndragon/article/details/47860659</a></p>
+</li>
+</ul>
+<h2 id="Android_MVP__u63A2_u7A76_u4E0E_u603B_u7ED3"><a href="#Android_MVP__u63A2_u7A76_u4E0E_u603B_u7ED3" class="headerlink" title="Android MVP 探究与总结"></a><a href="http://www.v2ex.com/t/212456#reply2" target="_blank" rel="external">Android MVP 探究与总结</a></h2><p>导读：在Android的开发过程中，Activity承担了大量地工作。如果对整个项目十分了解，并且在开发过程中有意识地抽离出了一些通用层的话，维护起来还稍微好一点，但实际上我们经常会遇到这样一些情况：维护并迭代已有地商业项目（可能前几期并不是由你开发）;UI变动极大（是不是经常Crtl+f到处查找？）…</p>
+<p>如果按照MVC的项目结构来说，Activity应该是属于View这一层。而实质上，它既承担了View，更多地却包含一些Controller的东西在里面。这对于开发与维护来说极度不利，耦合度大高了</p>
+<p>那么有没有什么解决方案呢？答案当然就是本文所讲述的——MVP了</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/18/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="http://p3.qqgexing.com/touxiang/20120825/2044/5038c8a68c912.jpg" alt="liuzhe" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">liuzhe</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">我们的征途是星辰大海</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Android_u6700_u4F73_u5B9E_u8DF5_2015_u5E7412_u67085_u65E520_3A56_3A38"><span class="nav-number">1.</span> <span class="nav-text">Android最佳实践  2015年12月5日20:56:38</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHPHub_for_Android"><span class="nav-number">1.1.</span> <span class="nav-text">PHPHub for Android</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u529F_u80FD_u7B80_u8FF0"><span class="nav-number">1.1.1.</span> <span class="nav-text">功能简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5907_u6CE8"><span class="nav-number">1.1.2.</span> <span class="nav-text">备注</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nucleus"><span class="nav-number">1.2.</span> <span class="nav-text">Nucleus</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u4ECB_u7ECD_uFF08_u7FFB_u8BD1_u81EA_u8BE5_u9879_u76EE_u7684README_uFF09"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">介绍（翻译自该项目的README）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nucleus_u7684_u4E3B_u8981_u7279_u6027_uFF08_u7FFB_u8BD1_u81EA_u8BE5_u9879_u76EE_u7684README_uFF09"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">Nucleus的主要特性（翻译自该项目的README）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scoop"><span class="nav-number">1.3.</span> <span class="nav-text">Scoop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Navigation__uFF08_u5BFC_u822A_uFF09"><span class="nav-number">1.3.1.</span> <span class="nav-text">Navigation （导航）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android_u5F00_u53D1_u67B6_u6784_u6A21_u5F0F_u63A2_u7D22"><span class="nav-number">1.4.</span> <span class="nav-text">Android开发架构模式探索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RxFlux"><span class="nav-number">1.4.1.</span> <span class="nav-text">RxFlux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-CleanArchitecture"><span class="nav-number">1.4.2.</span> <span class="nav-text">Android-CleanArchitecture</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android__u4E2D_u7684_Flux__u67B6_u6784"><span class="nav-number">1.5.</span> <span class="nav-text">Android 中的 Flux 架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android_MVP__u63A2_u7A76_u4E0E_u603B_u7ED3"><span class="nav-number">1.6.</span> <span class="nav-text">Android MVP 探究与总结</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liuzhe</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
