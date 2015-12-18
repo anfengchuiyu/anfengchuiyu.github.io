@@ -1,0 +1,126 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "id": 1,
+      "title": "星际穿越 Interstellar (2014)",
+      "score": "9.1",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2206088801.jpg"
+    },
+    {
+      "id": 2,
+      "title": "小王子 The Little Prince (2015)",
+      "score": "8.1",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2274029145.jpg"
+    },
+    {
+      "id": 3,
+      "title": "海绵宝宝 The SpongeBob Movie: Sponge Out of Water (2015)",
+      "score": "7.2",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2282934200.jpg"
+    },
+    {
+      "id": 4,
+      "title": "美国女主人 Mistress America (2015)",
+      "score": "7.3",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2261186463.jpg"
+    },
+    {
+      "id": 5,
+      "title": "33名矿工 The 33 (2015)",
+      "score": "7.4",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2262411252.jpg"
+    },
+    {
+      "id": 6,
+      "title": "蚁人 Ant-Man (2015)",
+      "score": "7.8",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2266823371.jpg"
+    },
+    {
+      "id": 7,
+      "title": "头脑特工队 Inside Out (2015)",
+      "score": "8.7",
+      "icon": "http://img4.douban.com/view/movie_poster_cover/lpst/public/p2266293606.jpg"
+    },
+    {
+      "id": 8,
+      "title": "007：幽灵党 Spectre (2015)",
+      "score": "6.2",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2276234635.jpg"
+    },
+    {
+      "id": 9,
+      "title": "王牌特工：特工学院 Kingsman: The Secret Service (2014)",
+      "score": "8.5",
+      "icon": "http://img4.douban.com/view/movie_poster_cover/lpst/public/p2231932406.jpg"
+    },
+    {
+      "id": 10,
+      "title": "消失的爱人 Gone Girl (2014)",
+      "score": "8.7",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2221768894.jpg"
+    },
+    {
+      "id": 11,
+      "title": "超能陆战队 Big Hero 6 (2014)",
+      "score": "8.7",
+      "icon": "http://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2224568669.jpg"
+    },
+    {
+      "id": 12,
+      "title": "速度与激情7 Fast & Furious 7 (2015)",
+      "score": "8.4",
+      "icon": "http://img4.douban.com/view/movie_poster_cover/lpst/public/p2233706697.jpg"
+    },
+    {
+      "id": 13,
+      "title": "碟中谍5：神秘国度 Mission: Impossible - Rogue Nation (2015)",
+      "score": "7.7",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2263582212.jpg"
+    },
+    {
+      "id": 14,
+      "title": "布达佩斯大饭店 The Grand Budapest Hotel (2014)",
+      "score": "8.7",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2178872593.jpg"
+    },
+    {
+      "id": 15,
+      "title": "模仿游戏 The Imitation Game (2014)",
+      "score": "8.6",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2255040492.jpg"
+    },
+    {
+      "id": 16,
+      "title": "饥饿游戏3：嘲笑鸟(下) The Hunger Games: Mockingjay - Part 2 (2015)",
+      "score": "6.3",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2282434035.jpg"
+    },
+    {
+      "id": 17,
+      "title": "秘密特工 The Man from U.N.C.L.E. (2015)",
+      "score": "8.0",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2257174963.jpg"
+    },
+    {
+      "id": 18,
+      "title": "爆裂鼓手 Whiplash (2014)",
+      "score": "8.6",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2220776342.jpg"
+    },
+    {
+      "id": 19,
+      "title": "小黄人大眼萌 Minions (2015)",
+      "score": "7.3",
+      "icon": "http://img3.douban.com/view/movie_poster_cover/lpst/public/p2265761240.jpg"
+    },
+    {
+      "id": 20,
+      "title": "明日边缘 Edge of Tomorrow (2014)",
+      "score": "8.1",
+      "icon": "http://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2185073849.jpg"
+    }
+  ],
+  "message": "movies"
+}
